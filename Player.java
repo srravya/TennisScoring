@@ -15,7 +15,7 @@ public class Player {
 	}
 	
 	
-	public TennisPlayer() {
+	public Player() {
 	
 		super();
 		this.gameStatus = "";
