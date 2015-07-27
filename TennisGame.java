@@ -30,6 +30,7 @@ public class TennisGame {
 
 	private boolean isMinScoreNotReached() {
 		return (player1.getGameScore() > 3 || player2.getGameScore() > 3);
+
 	}
 
 	private void incrementScore(char player) {
