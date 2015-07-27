@@ -11,22 +11,30 @@ public class TennisGame {
 
 	public String getGameStatus(String pointStatus) {
 		int i = 0;
-		while (isMinScoreNotReached() || isNotGamePoint()) {
+		for (char c : pointStatus.toCharArray()) {
+			if (isMinScoreNotReached() || isNotGamePoint()) {
 
-			System.out.println(pointStatus.charAt(i));
-			incrementScore(pointStatus.charAt(i++));
-			System.out.println(player1.getGameScore()+","+player2.getGameScore());
+				System.out.println(pointStatus.charAt(i));
+				incrementScore(pointStatus.charAt(i++));
+				System.out.println(player1.getGameScore() + "," + player2.getGameScore());
+			}
+			else{
+				if (player1.getGameScore() > player2.getGameScore()) {
+					player1.setSetScore(player1.getSetScore() + 1);
+				} else {
+					player2.setSetScore(player2.getSetScore() + 1);
+				}
+				break;
+			}
+
 		}
-		if (player1.getGameScore() > player2.getGameScore()) {
-			player1.setSetScore(player1.getSetScore()+1);
-		} else {
-			player2.setSetScore(player2.getSetScore()+1);
-		}
+		
+
 		return player1.getSetScore() + "-" + player2.getSetScore();
 	}
 
 	private boolean isNotGamePoint() {
-		
+
 		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < 2);
 	}
 
