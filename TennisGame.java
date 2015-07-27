@@ -8,7 +8,8 @@ public class TennisGame {
 	public TennisGame() {
 		
 		this.gameStatus = "";
-
+		this.player1=new Player();
+		this.player2=new Player();
 	}
 
 	public String getGameStatus(String pointStatus) {

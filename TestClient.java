@@ -6,7 +6,7 @@ public class TestClient {
 		// TODO Auto-generated method stub
 		TennisGame game=new TennisGame();
 		String pointState="DFFDDFDFDDFDFFDFDFDF";
-		game.getGameStatus(pointState);
+		System.out.println(game.getGameStatus(pointState));
 		
 	}
 
