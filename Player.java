@@ -1,6 +1,6 @@
 package TennisScoring;
 
-public class TennisPlayer {
+public class Player {
 	private int setScore;
 	private int gameScore;
 	private String name;
