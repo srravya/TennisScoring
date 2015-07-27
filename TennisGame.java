@@ -17,9 +17,7 @@ public class TennisGame {
 		while (isMinScoreNotReached() || isNotGamePoint()) {
 			incrementScore(pointStatus.charAt(i++));
 		}
-		int player1Score = player1.getGameScore();
-		int player2Score = player2.getGameScore();
-		if (player1Score > player2Score) {
+		if (player1.getGameScore() > player2.getGameScore()) {
 			player1.setSetScore(player1.getSetScore()+1);
 		} else {
 			player2.setSetScore(player2.getSetScore()+1);
@@ -28,18 +26,22 @@ public class TennisGame {
 	}
 
 	private boolean isNotGamePoint() {
+		
 		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < 2);
 	}
 
 	private boolean isMinScoreNotReached() {
-		return (player1.getGameScore() > 3 || player2.getGameScore() > 3);
+		return (player1.getGameScore() < 3 || player2.getGameScore() < 3);
 	}
 
 	private void incrementScore(char player) {
-		if (player1.equals("" + player)) {
+		System.out.println("looking at "+player);
+		if (player1.getName().equals("" + player)) {
 			player1.setGameScore(player1.getGameScore() + 1);
+			System.out.println("player1 point");
 		} else {
 			player2.setGameScore(player2.getGameScore() + 1);
+			System.out.println("player2 point");
 		}
 	}
 }

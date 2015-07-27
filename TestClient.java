@@ -8,7 +8,8 @@ public class TestClient {
 		Player player2=new Player("F");
 		
 		TennisGame game=new TennisGame(player1, player2);
-		String pointState="DFFDDFDFDDFDFFDFDFDF";
+		String pointState="DFFDDFDFDD"
+				+ "FDFFDFDFDF";
 		System.out.println(game.getGameStatus(pointState));
 		
 	}
