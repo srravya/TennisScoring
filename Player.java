@@ -7,7 +7,6 @@ public class Player {
 	
 	public Player() {
 	
-		super();
 		this.name = "";
 		this.setScore = 0;
 		this.gameScore = 0;
