@@ -6,9 +6,7 @@ public class TennisGame {
 	private Player player2;
 
 	public TennisGame() {
-		super();
 		this.gameStatus = "";
-
 	}
 
 	public String getGameStatus(String pointStatus) {
@@ -27,16 +25,18 @@ public class TennisGame {
 	}
 
 	private boolean isNotGamePoint() {
-		// TODO Auto-generated method stub
-		return false;
+		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < 2);
 	}
 
 	private boolean isMinScoreNotReached() {
-		// TODO Auto-generated method stub
-		return false;
+		return (player1.getGameScore() > 3 || player2.getGameScore() > 3);
 	}
 
 	private void incrementScore(char player) {
-
+		if (player1.equals("" + player)) {
+			player1.setGameScore(player1.getGameScore() + 1);
+		} else {
+			player2.setGameScore(player2.getGameScore() + 1);
+		}
 	}
 }
