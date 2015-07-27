@@ -6,7 +6,7 @@ public class TennisGame {
 	private Player player2;
 
 	public TennisGame() {
-		super();
+		
 		this.gameStatus = "";
 
 	}
