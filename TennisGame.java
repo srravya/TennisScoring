@@ -25,12 +25,10 @@ public class TennisGame {
 	}
 
 	private boolean isNotGamePoint() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	private boolean isMinScoreNotReached() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
