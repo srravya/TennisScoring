@@ -1,7 +1,9 @@
 package TennisScoring;
 
 public class TennisGame {
-	int setScore;
-	int gameScore;
-	String name;
+	private int setScore;
+	private int gameScore;
+	private String name;
+	
+	
 }
