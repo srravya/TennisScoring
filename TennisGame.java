@@ -27,14 +27,11 @@ public class TennisGame {
 	}
 
 	private boolean isNotGamePoint() {
-		// TODO Auto-generated method stub
 		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < 2);
 	}
 
 	private boolean isMinScoreNotReached() {
-		// TODO Auto-generated method stub
 		return (player1.getGameScore() >3 || player2.getGameScore() >3);
-
 	}
 
 
