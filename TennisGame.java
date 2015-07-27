@@ -10,12 +10,12 @@ public class TennisGame {
 	}
 
 	public String getGameStatus(String pointStatus) {
-		int i = 0;
-		for (char c : pointStatus.toCharArray()) {
+		
+		for (char point : pointStatus.toCharArray()) {
 			if (isMinScoreNotReached() || isNotGamePoint()) {
 
-				System.out.println(pointStatus.charAt(i));
-				incrementScore(pointStatus.charAt(i++));
+				System.out.print(point+"\t");
+				incrementScore(point);
 				System.out.println(player1.getGameScore() + "," + player2.getGameScore());
 			}
 			else{
@@ -25,6 +25,10 @@ public class TennisGame {
 					player2.setSetScore(player2.getSetScore() + 1);
 				}
 				break;
+//				System.out.println("reseting ");
+//				player1.setGameScore(0);
+//				player2.setGameScore(0);
+				
 			}
 
 		}
