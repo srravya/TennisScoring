@@ -21,21 +21,27 @@ public class TennisGame {
 //		} else {
 //			this.team2SetScore++;
 //		}
-		return this.gameStatus = this.team1SetScore + "-" + this.team2SetScore;
+		return this.gameStatus = this.player1.getSetScore() + "-" + this.player2.getSetScore();
 	}
 
 	private boolean isNotGamePoint() {
 		// TODO Auto-generated method stub
-		return false;
+		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < 2);
 	}
 
 	private boolean isMinScoreNotReached() {
 		// TODO Auto-generated method stub
-		return false;
+		return (player1.getGameScore() >3 || player2.getGameScore() >3);
 	}
 
 
 	private void incrementScore(char player) {
-
+		if(player1.equals(""+player))
+		{
+			player1.setScore++;
+		}
+		else{
+			player2.setScore++;
+		}
 	}
 }
