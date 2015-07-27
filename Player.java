@@ -6,11 +6,9 @@ public class Player {
 	private String name;
 
 	public Player() {
-		this.gameStatus = "";
-		this.team1Score = 0;
-		this.team2Score = 0;
-		this.team1SetScore = 0;
-		this.team2SetScore = 0;
+		this.name = "";
+		this.setScore = 0;
+		this.gameScore = 0;
 	}
 
 	public int getSetScore() {
