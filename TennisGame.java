@@ -3,7 +3,9 @@ package TennisScoring;
 public class TennisGame {
 	private Player player1;
 	private Player player2;
-
+	private static final int MINIMUM_DIFFERENCE_FOR_A_SET = 2;
+	private static final int MINIMUM_SCORE_FOR_A_SET = 4;
+	
 	public TennisGame(Player player1, Player player2) {
 		this.player1 = player1;
 		this.player2 = player2;
@@ -35,11 +37,11 @@ public class TennisGame {
 
 	private boolean isNotGamePoint() {
 
-		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < 2);
+		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < MINIMUM_DIFFERENCE_FOR_A_SET);
 	}
 
 	private boolean isMinScoreNotReached() {
-		return (player1.getGameScore() < 4 && player2.getGameScore() < 4);
+		return (player1.getGameScore() < MINIMUM_SCORE_FOR_A_SET && player2.getGameScore() < MINIMUM_SCORE_FOR_A_SET);
 	}
 
 	private void incrementScore(char player) {
