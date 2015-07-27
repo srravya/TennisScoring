@@ -12,7 +12,10 @@ public class TennisGame {
 	public String getGameStatus(String pointStatus) {
 		int i = 0;
 		while (isMinScoreNotReached() || isNotGamePoint()) {
+
+			System.out.println(pointStatus.charAt(i));
 			incrementScore(pointStatus.charAt(i++));
+			System.out.println(player1.getGameScore()+","+player2.getGameScore());
 		}
 		if (player1.getGameScore() > player2.getGameScore()) {
 			player1.setSetScore(player1.getSetScore()+1);
@@ -28,7 +31,7 @@ public class TennisGame {
 	}
 
 	private boolean isMinScoreNotReached() {
-		return (player1.getGameScore() < 3 || player2.getGameScore() < 3);
+		return (player1.getGameScore() < 4 && player2.getGameScore() < 4);
 	}
 
 	private void incrementScore(char player) {
