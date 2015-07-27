@@ -5,8 +5,8 @@ public class Player {
 	private int gameScore;
 	private String name;
 
-	public Player() {
-		this.name = "";
+	public Player(String name) {
+		this.name = name;
 		this.setScore = 0;
 		this.gameScore = 0;
 	}

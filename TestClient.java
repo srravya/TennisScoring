@@ -4,7 +4,10 @@ public class TestClient {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		TennisGame game=new TennisGame();
+		Player player1=new Player("D");
+		Player player2=new Player("F");
+		
+		TennisGame game=new TennisGame(player1, player2);
 		String pointState="DFFDDFDFDDFDFFDFDFDF";
 		System.out.println(game.getGameStatus(pointState));
 		
