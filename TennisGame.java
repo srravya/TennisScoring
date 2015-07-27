@@ -16,12 +16,14 @@ public class TennisGame {
 		while (isMinScoreNotReached() || isNotGamePoint()) {
 			incrementScore(pointStatus.charAt(i++));
 		}
-		if (player1.getGameScore() > player2.getGameScore()) {
-			this.team1SetScore++;
+		int player1Score = player1.getGameScore();
+		int player2Score = player2.getGameScore();
+		if (player1Score > player2Score) {
+			player1.setSetScore(1);
 		} else {
-			this.team2SetScore++;
+			player2.setSetScore(1);
 		}
-		return this.gameStatus = this.team1SetScore + "-" + this.team2SetScore;
+		return this.gameStatus = player1.getSetScore() + "-" + player2.getSetScore();
 	}
 
 	private boolean isNotGamePoint() {
@@ -33,7 +35,6 @@ public class TennisGame {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 
 	private void incrementScore(char player) {
 
