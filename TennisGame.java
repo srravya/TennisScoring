@@ -5,8 +5,10 @@ public class TennisGame {
 	private Player player1;
 	private Player player2;
 
-	public TennisGame() {
+	public TennisGame(Player player1, Player player2) {
 		this.gameStatus = "";
+		this.player1 = player1;
+		this.player2 = player2;
 	}
 
 	public String getGameStatus(String pointStatus) {
