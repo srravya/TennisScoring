@@ -2,18 +2,12 @@ package TennisScoring;
 
 public class TennisGame {
 	private String gameStatus;
-	private int team1Score;
-	private int team2Score;
-	private int team1SetScore;
-	private int team2SetScore;
+	private Player player1;
+	private Player player2;
 
 	public TennisGame() {
 		super();
 		this.gameStatus = "";
-		this.team1Score = 0;
-		this.team2Score = 0;
-		this.team1SetScore = 0;
-		this.team2SetScore = 0;
 
 	}
 
@@ -22,11 +16,11 @@ public class TennisGame {
 		while (isMinScoreNotReached() || isNotGamePoint()) {
 			incrementScore(pointStatus.charAt(i++));
 		}
-		if (this.team1Score > this.team2Score) {
-			this.team1SetScore++;
-		} else {
-			this.team2SetScore++;
-		}
+//		if (player1.getteam1Score > this.team2Score) {
+//			this.team1SetScore++;
+//		} else {
+//			this.team2SetScore++;
+//		}
 		return this.gameStatus = this.team1SetScore + "-" + this.team2SetScore;
 	}
 
@@ -40,9 +34,6 @@ public class TennisGame {
 		return false;
 	}
 
-	private boolean isTie() {
-		return false;
-	}
 
 	private void incrementScore(char player) {
 
