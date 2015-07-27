@@ -16,11 +16,11 @@ public class TennisGame {
 		while (isMinScoreNotReached() || isNotGamePoint()) {
 			incrementScore(pointStatus.charAt(i++));
 		}
-//		if (player1.getteam1Score > this.team2Score) {
-//			this.team1SetScore++;
-//		} else {
-//			this.team2SetScore++;
-//		}
+		if (player1.getGameScore() > player2.getGameScore()) {
+			this.team1SetScore++;
+		} else {
+			this.team2SetScore++;
+		}
 		return this.gameStatus = this.team1SetScore + "-" + this.team2SetScore;
 	}
 
