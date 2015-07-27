@@ -1,34 +1,34 @@
 package TennisScoring;
 
 public class Player {
-	private int setScore;
 	private int gameScore;
+	private int pointsScore;
 	private String name;
 
 	public Player(String name) {
 		this.name = name;
-		this.setScore = 0;
 		this.gameScore = 0;
-	}
-
-	public int getSetScore() {
-		return setScore;
+		this.pointsScore = 0;
 	}
 
 	public int getGameScore() {
 		return gameScore;
 	}
 
+	public int getPointScore() {
+		return pointsScore;
+	}
+
 	public String getName() {
 		return name;
 	}
 
-	public void setSetScore(int setScore) {
-		this.setScore = setScore;
+	public void setGameScore(int setScore) {
+		this.gameScore = setScore;
 	}
 
-	public void setGameScore(int gameScore) {
-		this.gameScore = gameScore;
+	public void setPointScore(int gameScore) {
+		this.pointsScore = gameScore;
 	}
 
 }

@@ -17,36 +17,44 @@ public class TennisGame {
 
 				System.out.print(point + "\t");
 				incrementScore(point);
-				System.out.println(player1.getGameScore() + "," + player2.getGameScore());
+				System.out.println(player1.getPointScore() + "," + player2.getPointScore());
 			} else {
-				if (player1.getGameScore() > player2.getGameScore()) {
-					player1.setSetScore(player1.getSetScore() + 1);
+				if (player1.getPointScore() > player2.getPointScore()) {
+					player1.setGameScore(player1.getGameScore() + 1);
 				} else {
-					player2.setSetScore(player2.getSetScore() + 1);
+					player2.setGameScore(player2.getGameScore() + 1);
 				}
+				getSetsStatus(player1,player2);
 				break;
+
 				// System.out.println("reseting ");
 				// player1.setGameScore(0);
 				// player2.setGameScore(0);
+
 			}
 		}
-		return player1.getSetScore() + "-" + player2.getSetScore();
+		return player1.getGameScore() + "-" + player2.getGameScore();
+	}
+
+	private void getSetsStatus(Player player1, Player player2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private boolean isNotGamePoint() {
 
-		return (Math.abs(player1.getGameScore() - player2.getGameScore()) < MINIMUM_DIFFERENCE_FOR_A_SET);
+		return (Math.abs(player1.getPointScore() - player2.getPointScore()) < MINIMUM_DIFFERENCE_FOR_A_SET);
 	}
 
 	private boolean isMinScoreNotReached() {
-		return (player1.getGameScore() < MINIMUM_SCORE_FOR_A_SET && player2.getGameScore() < MINIMUM_SCORE_FOR_A_SET);
+		return (player1.getPointScore() < MINIMUM_SCORE_FOR_A_SET && player2.getPointScore() < MINIMUM_SCORE_FOR_A_SET);
 	}
 
 	private void incrementScore(char player) {
 		if (player1.getName().equals("" + player)) {
-			player1.setGameScore(player1.getGameScore() + 1);
+			player1.setPointScore(player1.getPointScore() + 1);
 		} else {
-			player2.setGameScore(player2.getGameScore() + 1);
+			player2.setPointScore(player2.getPointScore() + 1);
 		}
 	}
 }
