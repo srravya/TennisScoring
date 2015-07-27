@@ -14,7 +14,6 @@ public class TennisGame {
 	public String getGameStatus(String pointStatus) {
 		for (char point : pointStatus.toCharArray()) {
 			if (isMinScoreNotReached() || isNotGamePoint()) {
-
 				System.out.print(point + "\t");
 				incrementScore(point);
 				System.out.println(player1.getPointScore() + "," + player2.getPointScore());
